@@ -1,0 +1,91 @@
+/* src/components/Hero.css */
+
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0 24px;
+}
+
+.hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* "Available for work" badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(10, 10, 12, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 8px 24px;
+  margin-bottom: 48px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.1);
+}
+
+.hero-badge-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+}
+
+/* Main Title */
+.hero-title {
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.hero-title-white {
+  display: block;
+  color: white;
+}
+
+.hero-title-purple {
+  display: block;
+  color: rgba(192, 132, 252, 0.85);
+  margin-top: -0.05em;
+}
+
+/* Typing text */
+.hero-typing-wrapper {
+  font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+  font-weight: 500;
+  margin-bottom: 64px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #94a3b8;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 32px;
+  background-color: #a855f7;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

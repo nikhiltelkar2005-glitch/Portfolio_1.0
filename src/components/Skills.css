@@ -1,0 +1,61 @@
+/* src/components/Skills.css */
+
+.skills-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 128px 24px;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.025em;
+  color: white;
+  line-height: 1.1;
+}
+
+.skills-subtitle {
+  color: #64748b;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* 4-column grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.skill-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: -0.025em;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover .skill-name {
+  color: #c084fc;
+}

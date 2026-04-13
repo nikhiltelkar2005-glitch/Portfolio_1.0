@@ -1,0 +1,101 @@
+/* src/components/Navbar.css */
+
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 50;
+  transition: padding 0.5s ease;
+}
+
+.navbar-wrapper.scrolled {
+  padding-top: 8px;
+}
+
+.navbar-wrapper.top {
+  padding-top: 32px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 16px;
+  padding: 16px 32px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    margin: 0 48px;
+  }
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.2);
+  background-color: rgba(3, 0, 20, 0.6);
+}
+
+.navbar.top {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: #a855f7;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    gap: 32px;
+  }
+}
+
+.navbar-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .navbar-link {
+    font-size: 1rem;
+  }
+}
+
+.navbar-link:hover {
+  color: white;
+}
+
+.navbar-link.active {
+  color: white;
+  border: 1px solid #a855f7;
+  border-radius: 4px;
+  padding: 2px 8px;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
