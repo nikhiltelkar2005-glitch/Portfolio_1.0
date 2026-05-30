@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Nikhil's Portfolio 2.0
+# 🚀 Nikhil's Portfolio 1.0
 
 **A sleek, modern developer portfolio built with React & Vite**
 
