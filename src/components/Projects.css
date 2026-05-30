@@ -185,3 +185,65 @@
 .project-footer-link:hover {
   color: #d8b4fe;
 }
+
+/* Mobile action buttons styling */
+.project-mobile-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  margin-top: auto;
+}
+
+.project-mobile-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  text-decoration: none;
+}
+
+.project-mobile-action-btn.demo {
+  background: linear-gradient(135deg, #a855f7, #9333ea);
+  color: white !important;
+}
+
+.project-mobile-action-btn.demo:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+}
+
+.project-mobile-action-btn.code {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-mobile-action-btn.code:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsiveness for Project Actions */
+@media (max-width: 1023px) {
+  .project-image-overlay {
+    display: none !important; /* Hide hover actions overlay on tablet/mobile */
+  }
+  .project-footer-link {
+    display: none !important; /* Hide footer link on tablet/mobile */
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-mobile-actions {
+    display: none !important; /* Hide mobile action buttons on desktop */
+  }
+}

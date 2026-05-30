@@ -1,7 +1,7 @@
 /* src/components/About.css */
 
 .about-section {
-  padding: 96px 0;
+  padding: 64px 0;
   background-color: #0a0a0c;
   color: white;
   position: relative;
@@ -190,14 +190,20 @@
 }
 
 .about-large-margin {
-  margin-bottom: 96px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .about-large-margin {
+    margin-bottom: 96px;
+  }
 }
 
 .about-card {
   background-color: #111116;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
-  padding: 24px;
+  padding: 20px;
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s ease;
@@ -313,11 +319,21 @@
 
 .about-achievement-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 4px;
   align-items: flex-start;
   margin-bottom: 8px;
   position: relative;
   z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .about-achievement-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
 }
 
 .about-achievement-title {

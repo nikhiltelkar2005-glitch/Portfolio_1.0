@@ -101,8 +101,8 @@ const Projects = () => {
               <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
                 <div className="project-image-overlay">
-                  <a href={project.link} className="project-icon-btn"><Eye size={20} /></a>
-                  <a href={project.github} className="project-icon-btn"><Github size={20} /></a>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-icon-btn"><Eye size={20} /></a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-icon-btn"><Github size={20} /></a>
                 </div>
               </div>
 
@@ -116,7 +116,17 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <a href={project.link} className="project-footer-link">
+                {/* Mobile action buttons (visible on screens < 1024px) */}
+                <div className="project-mobile-actions">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-mobile-action-btn demo">
+                    <Eye size={16} /> Live Demo
+                  </a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-mobile-action-btn code">
+                    <Github size={16} /> Code
+                  </a>
+                </div>
+
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-footer-link">
                   View Project <ExternalLink size={16} />
                 </a>
               </div>

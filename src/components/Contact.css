@@ -65,9 +65,15 @@
   background-color: #0f0f14;
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 1.25rem;
-  padding: 32px;
+  padding: 20px;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .contact-form-card {
+    padding: 32px;
+  }
 }
 
 .contact-form-card::before {
@@ -224,6 +230,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  word-break: break-all;
+  flex-wrap: wrap;
 }
 
 .contact-info-card-value a {
@@ -289,10 +297,16 @@
   background: linear-gradient(135deg, #1e0a3c, #2d1060, #1e0a3c);
   border: 1px solid rgba(168, 85, 247, 0.25);
   border-radius: 1.5rem;
-  padding: 64px 40px;
+  padding: 40px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .contact-cta-banner {
+    padding: 64px 40px;
+  }
 }
 
 .contact-cta-banner::before {
@@ -306,13 +320,26 @@
   background-color: #a855f7;
   border-radius: 50%;
   box-shadow: 0 0 20px #a855f7;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .contact-cta-banner::before {
+    display: block;
+  }
 }
 
 .contact-cta-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: white;
   margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .contact-cta-title {
+    font-size: 2rem;
+  }
 }
 
 .contact-cta-text {

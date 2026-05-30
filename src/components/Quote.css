@@ -49,9 +49,15 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 896px;
   margin: 0 auto;
-  padding: 64px 32px;
+  padding: 32px 16px;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .quote-card {
+    padding: 64px 32px;
+  }
 }
 
 .quote-top-line {

@@ -1,5 +1,8 @@
 /* src/components/Navbar.css */
 
+/* ─────────────────────────────────────────
+   Top Navbar (visible on ALL screen sizes)
+───────────────────────────────────────── */
 .navbar-wrapper {
   position: fixed;
   top: 0;
@@ -9,6 +12,8 @@
   justify-content: center;
   z-index: 50;
   transition: padding 0.5s ease;
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 
 .navbar-wrapper.scrolled {
@@ -16,7 +21,16 @@
 }
 
 .navbar-wrapper.top {
-  padding-top: 32px;
+  padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .navbar-wrapper {
+    padding: 0;
+  }
+  .navbar-wrapper.top {
+    padding-top: 32px;
+  }
 }
 
 .navbar {
@@ -25,16 +39,18 @@
   align-items: center;
   width: 100%;
   max-width: 1152px;
-  margin: 0 16px;
-  padding: 16px 32px;
+  margin: 0;
+  padding: 10px 20px;
   border-radius: 9999px;
   border: 1px solid transparent;
   transition: all 0.5s ease;
+  z-index: 60;
 }
 
 @media (min-width: 768px) {
   .navbar {
     margin: 0 48px;
+    padding: 16px 32px;
   }
 }
 
@@ -55,21 +71,23 @@
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.05em;
   color: #a855f7;
   text-decoration: none;
 }
 
+/* Desktop nav links — hidden below 768px */
 .navbar-links {
-  display: flex;
+  display: none;
   gap: 24px;
   align-items: center;
 }
 
 @media (min-width: 768px) {
   .navbar-links {
+    display: flex;
     gap: 32px;
   }
 }
@@ -98,4 +116,88 @@
   border-radius: 4px;
   padding: 2px 8px;
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+
+/* ─────────────────────────────────────────
+   Bottom Navigation Bar  (mobile only)
+───────────────────────────────────────── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  z-index: 60;
+  display: flex;
+  align-items: stretch;
+  background: rgba(3, 0, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.4);
+  padding-bottom: env(safe-area-inset-bottom); /* iPhone notch support */
+}
+
+/* Hide bottom nav on desktop */
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-decoration: none;
+  color: #64748b;
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+.bottom-nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #a855f7, #c084fc);
+  border-radius: 0 0 4px 4px;
+  transition: width 0.3s ease;
+}
+
+.bottom-nav-item.active::before {
+  width: 40px;
+}
+
+.bottom-nav-item.active {
+  color: #c084fc;
+}
+
+.bottom-nav-item:active {
+  color: #a855f7;
+}
+
+.bottom-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+  transform: scale(1.15);
+}
+
+.bottom-nav-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
