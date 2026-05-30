@@ -21,11 +21,13 @@
 
 - 🎨 **Premium Dark Theme** — Sleek glassmorphism design with purple accent glow
 - ⚡ **Blazing Fast** — Powered by Vite for instant HMR and optimized builds
-- 🎭 **Smooth Animations** — Framer Motion powered micro-interactions and page transitions
-- 📱 **Fully Responsive** — Looks stunning on desktop, tablet, and mobile
+- 🎭 **Snappy Page Transitions** — Framer Motion page navigation with fluid slide up, fade, and GPU-optimized snappy timings
+- 📱 **Fully Responsive Layout** — Optimized for desktops, tablets, and mobile devices
+- 🧭 **Mobile Bottom Navigation** — Safe bottom-pill navigation bar with custom active markers and safe-area notch supports
+- 🖱️ **Custom Glowing Cursor** — Responsive dual-ring purple neon mouse trail with dynamic click reactions, text-mode morphing, and auto-disabling on touchscreens
+- 🧹 **Scroll Restoration** — Automatic Scroll-To-Top handler resetting scroll positions across route paths
 - ✍️ **Dynamic Typing Effect** — Auto-rotating hero text with typewriter animation
 - 📬 **Working Contact Form** — Integrated with [Formspree](https://formspree.io) for real email delivery
-- 🧭 **Client-Side Routing** — SPA navigation with React Router
 - 🌌 **Animated Background** — Orbital rings, star field, and noise texture effects
 
 ---
@@ -36,7 +38,7 @@
 |----------|-------------|
 | **Frontend** | React 18, JSX, Vanilla CSS |
 | **Build Tool** | Vite 5 |
-| **Animations** | Framer Motion |
+| **Animations** | Framer Motion (Spring Physics transitions) |
 | **Icons** | Lucide React |
 | **Routing** | React Router DOM v6 |
 | **Contact** | Formspree API |
@@ -48,19 +50,24 @@
 
 ```
 Portfolio/
-├── public/                 # Static assets (project screenshots)
+├── public/                 # Static assets & project screenshots
+│   └── iss-tracking.png    # ISS Orbital tracking screenshot
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx      # Navigation bar
+│   │   ├── Navbar.jsx      # Navigation bar (Top on desktop, Bottom nav on mobile)
+│   │   ├── Navbar.css      # Desktop & Mobile glassmorphic nav styles
 │   │   ├── Hero.jsx        # Hero section with typing effect
-│   │   ├── Skills.jsx      # Skills grid with icons
+│   │   ├── Skills.jsx      # Skills grid with custom responsive glassmorphic cards
 │   │   ├── Quote.jsx       # Inspirational quote section
 │   │   ├── About.jsx       # About me & what I'm working on
-│   │   ├── Projects.jsx    # Project showcase cards
+│   │   ├── Projects.jsx    # Project showcase cards (ISS, AI Resume Screener, etc.)
 │   │   ├── Contact.jsx     # Contact form (Formspree)
 │   │   ├── Footer.jsx      # Footer with social links
-│   │   └── Background.jsx  # Animated background effects
-│   ├── App.jsx             # Root app with routing
+│   │   ├── Background.jsx  # Animated background effects
+│   │   ├── CustomCursor.jsx# Spring-loaded glowing purple cursor pointer
+│   │   ├── PageTransition.jsx# Snappy GPU-optimized route animations
+│   │   └── ScrollToTop.jsx # Automatic path scroll resets
+│   ├── App.jsx             # Root app with routing & animated transitions
 │   ├── index.css           # Global styles & design tokens
 │   └── main.jsx            # Entry point
 ├── index.html
@@ -111,10 +118,10 @@ npm run build
 > Clean, minimal hero with animated typing effect and CTA buttons
 
 ### 💡 Skills Grid
-> 16 technologies displayed in a responsive 4-column grid with hover effects
+> 16 technologies displayed in a responsive glassmorphic grid with neon purple highlights
 
 ### 🗂️ Projects Showcase
-> Real project cards with live demo links and GitHub repository links
+> Real project cards featuring Vercel live links and GitHub repository links
 
 ### 📬 Contact Form
 > Working contact form powered by Formspree for direct email delivery
@@ -127,6 +134,8 @@ npm run build
 
 | Project | Description | Live Demo |
 |---------|-------------|-----------|
+| **ISS Orbital Tracking** | Real-time orbital space station tracker with live telemetry tracking | [foai-endsem-zeta.vercel.app](https://foai-endsem-zeta.vercel.app) |
+| **AI Resume Screening Platform** | Automated candidate resume evaluator using AI/NLP scoring | [GitHub Repository](https://github.com/nikhiltelkar2005-glitch/resume-screening-platform) |
 | **Gramora** | Instagram-style social media platform | [gramora.vercel.app](https://gramora.vercel.app) |
 | **OtakuFlow** | Anime & manga discovery platform | [otaku-flow.vercel.app](https://otaku-flow.vercel.app) |
 | **Zenith Hackron** | Hackron 2026 hackathon project | [zenith-hackron.vercel.app](https://zenith-hackron.vercel.app) |
