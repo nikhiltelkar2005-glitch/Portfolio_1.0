@@ -6,6 +6,22 @@ import './Contact.css'
 const Projects = () => {
   const projects = [
     {
+      title: "ISS Orbital Tracking",
+      description: "A real-time tracking application for the International Space Station (ISS) featuring live telemetry tracking and interactive mapping.",
+      tech: ["React", "Leaflet Maps", "OpenNotify API", "Tailwind CSS"],
+      github: "https://github.com/nikhiltelkar2005-glitch/ISS_Orbital_Tracking",
+      link: "https://foai-endsem-zeta.vercel.app",
+      image: "/iss-tracking.png"
+    },
+    {
+      title: "AI Resume Screening Platform",
+      description: "An automated candidate screening platform utilizing AI and NLP algorithms to parse, evaluate, and score candidate resumes against job criteria.",
+      tech: ["React", "Node.js", "AI/NLP", "Tailwind CSS", "Express"],
+      github: "https://github.com/nikhiltelkar2005-glitch/resume-screening-platform",
+      link: "https://github.com/nikhiltelkar2005-glitch/resume-screening-platform",
+      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
       title: "Portfolio 1.0",
       description: "My personal portfolio website built to showcase my projects and skills.",
       tech: ["React", "Tailwind CSS", "Vite", "Lucide React", "Framer Motion"],
