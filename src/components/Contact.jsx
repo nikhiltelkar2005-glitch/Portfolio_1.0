@@ -5,6 +5,7 @@ import './Contact.css'
 const Contact = () => {
   const [copied, setCopied] = useState(null)
   const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState('')
 
   const handleCopy = (text, key) => {
     navigator.clipboard.writeText(text)
@@ -12,9 +13,35 @@ const Contact = () => {
     setTimeout(() => setCopied(null), 2000)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    window.location.href = `mailto:nikhiltelkar19@gmail.com?subject=Portfolio Contact from ${form.name}&body=${form.message}`
+    setStatus('sending')
+    
+    try {
+      // Replace YOUR_FORMSPREE_ID with your actual Formspree form ID
+      const response = await fetch('https://formspree.io/f/maqkkvab', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message
+        })
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setForm({ name: '', email: '', message: '' })
+        setTimeout(() => setStatus(''), 5000)
+      } else {
+        setStatus('error')
+      }
+    } catch (error) {
+      setStatus('error')
+    }
   }
 
   return (
@@ -74,9 +101,11 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit" className="contact-submit-btn">
-                  Send Message <Send size={18} />
+                <button type="submit" className="contact-submit-btn" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending...' : 'Send Message'} <Send size={18} />
                 </button>
+                {status === 'success' && <p style={{ color: '#22c55e', marginTop: '1rem', textAlign: 'center' }}>Message sent successfully!</p>}
+                {status === 'error' && <p style={{ color: '#ef4444', marginTop: '1rem', textAlign: 'center' }}>Failed to send message. Please try again.</p>}
               </form>
             </div>
           </div>

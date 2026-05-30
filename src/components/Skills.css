@@ -1,23 +1,25 @@
 /* src/components/Skills.css */
 
 .skills-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 128px 24px;
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skills-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  padding: 0 24px;
 }
 
 .skills-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   letter-spacing: -0.025em;
   color: white;
   line-height: 1.1;
@@ -25,20 +27,25 @@
 
 .skills-subtitle {
   color: #64748b;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
-/* 4-column grid */
+/* Grid container centered */
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 @media (min-width: 640px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -48,11 +55,45 @@
   }
 }
 
+/* Individual skill card */
+.skill-card {
+  background: #111;
+  border: 1px solid #1e1e2e;
+  border-radius: 16px;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: default;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.skill-card:hover {
+  border-color: #7c3aed;
+  transform: translateY(-4px);
+}
+
+.skill-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
 .skill-name {
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
   color: white;
-  letter-spacing: -0.025em;
+  text-align: center;
+  letter-spacing: -0.01em;
   transition: color 0.3s ease;
 }
 

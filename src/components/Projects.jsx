@@ -6,76 +6,76 @@ import './Contact.css'
 const Projects = () => {
   const projects = [
     {
-      title: "Weather App",
-      description: "A weather app that shows current and forecasted weather",
-      tech: ["HTML/CSS", "OpenWeather API", "JavaScript"],
-      github: "https://github.com",
-      link: "https://weather.com",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2070&auto=format&fit=crop"
+      title: "Portfolio 1.0",
+      description: "My personal portfolio website built to showcase my projects and skills.",
+      tech: ["React", "Tailwind CSS", "Vite", "Lucide React", "Framer Motion"],
+      github: "https://github.com/nikhiltelkar2005-glitch/Portfolio_1.0",
+      link: "https://portfolio-1-0-brown-pi.vercel.app",
+      image: "/portfolio.png"
     },
     {
-      title: "Voice-Base-Navigation Chrome Extension",
-      description: "A Chrome extension that allows users to navigate using voice commands. (Since It is a chrome extension there is no demo link, but you can use it through my git repo.)",
-      tech: ["JavaScript", "Manifest.js", "Voice Commands"],
-      github: "https://github.com",
-      link: "#",
-      image: "https://images.unsplash.com/photo-1588508065123-287b28e0139b?q=80&w=2070&auto=format&fit=crop"
+      title: "Gramora",
+      description: "An innovative web platform built with modern technologies.",
+      tech: ["React", "Node.js", "Express"],
+      github: "https://github.com/nikhiltelkar2005-glitch/Gramora",
+      link: "https://gramora.vercel.app",
+      image: "/gramora.png"
     },
     {
-      title: "Tic-Tac-Toe",
-      description: "A fun Game of X's and O's",
-      tech: ["Javascript", "HTML/CSS"],
-      github: "https://github.com",
-      link: "#",
-      image: "https://images.unsplash.com/photo-1621252178220-dca0df7cf9e3?q=80&w=2070&auto=format&fit=crop"
+      title: "OtakuFlow",
+      description: "A dedicated platform for anime and manga enthusiasts to track and discover new content.",
+      tech: ["React", "API Integration", "Tailwind CSS"],
+      github: "https://github.com/nikhiltelkar2005-glitch/OtakuFlow",
+      link: "https://otaku-flow.vercel.app",
+      image: "/otakuflow.png"
     },
     {
-      title: "IdeaVault",
-      description: "An AI-powered platform that turns startup ideas into detailed PRDs in minutes, with collaborative editing, similarity search, and idea management to speed up product development.",
-      tech: ["React 18", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "React Hook Form"],
-      github: "https://github.com",
-      link: "#",
+      title: "Zenith Hackron",
+      description: "Project developed for the Hackron 2026 hackathon, tackling specific problem statements.",
+      tech: ["React", "Next.js", "Hackathon"],
+      github: "https://github.com/nikhiltelkar2005-glitch/Zenith-Hackron",
+      link: "https://zenith-hackron.vercel.app",
       image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "College Placement Predictor",
-      description: "I Trained it on 10,000 students data, cleaned it, processed it, trained the ML model on it, Firstly i used linear Regression achieved 90% Accuracy, the used RFA (Random Forest Algorithm) and gained 99% Accuracy (Model is not Overfitting because of good database).",
-      tech: ["Python", "scikit-learn", "pandas", "joblib"],
-      github: "https://github.com",
-      link: "#",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+      title: "Rock Paper Scissors",
+      description: "A classic interactive web-based game of Rock, Paper, Scissors.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      github: "https://github.com/nikhiltelkar2005-glitch/ROCK_Paper_Scissors_Game",
+      link: "https://rock-paper-scissors-game-cyan-mu.vercel.app",
+      image: "/rock-paper-scissors.jpg"
     },
     {
-      title: "Omegle for University",
-      description: "A university-verified video chat platform that connects students in real-time using WebRTC and Socket.io. It ensures secure access through Clerk authentication, allowing only verified university users to join. Built with Next.js and hosted on Railway, it offers a safe, peer-to-peer chatting experience for students.",
-      tech: ["Next.js", "WebRTC", "Socket.io", "Clerk JS"],
-      github: "https://github.com",
-      link: "#",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop"
+      title: "Book Media Library",
+      description: "A digital library application to manage and discover books and other media.",
+      tech: ["React", "JavaScript", "CSS"],
+      github: "https://github.com/nikhiltelkar2005-glitch/Book-Media-Library",
+      link: "https://book-media-library.vercel.app",
+      image: "/book-media.png"
     },
     {
-      title: "Schedulo",
-      description: "A productivity app that helps users organize tasks and projects",
-      tech: ["Next JS", "Neon DB", "Clerk JS", "Postgresql", "Tailwind CSS", "Google Auth", "Google Cloud API"],
-      github: "https://github.com",
-      link: "#",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2072&auto=format&fit=crop"
+      title: "Travel Booking Website",
+      description: "A comprehensive travel booking platform allowing users to find and book their perfect trips.",
+      tech: ["React", "Tailwind CSS", "Frontend"],
+      github: "https://github.com/nikhiltelkar2005-glitch/Travel_booking_website",
+      link: "https://nirman-2-0.vercel.app",
+      image: "/travel-booking.jpg"
     },
     {
-      title: "Real Estate E-commerce",
-      description: "A sleek and modern frontend built to showcase properties and real estate services with an emphasis on design, animations, and responsiveness.",
-      tech: ["React", "Tailwind CSS", "Web3Forms", "ClerkJS", "React Toastify", "Framer Motion"],
-      github: "https://github.com",
-      link: "#",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop"
+      title: "CultStory",
+      description: "A web application for sharing and discovering cultural stories and experiences.",
+      tech: ["React", "JavaScript", "HTML/CSS"],
+      github: "https://github.com/nikhiltelkar2005-glitch/CultStory",
+      link: "https://cultstory.vercel.app",
+      image: "/cultstory.png"
     },
     {
-      title: "Portfolio 1.0",
-      description: "My First Portfolio Website built on React and Tailwind CSS.",
-      tech: ["React", "Tailwind CSS", "Vite", "Lucide React", "Email JS", "Framer Motion"],
-      github: "https://github.com",
-      link: "#",
-      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop"
+      title: "E-commerce Website",
+      description: "A full-featured e-commerce storefront with product listings, cart functionality, and checkout.",
+      tech: ["React", "Commerce", "State Management"],
+      github: "https://github.com/nikhiltelkar2005-glitch/E-commerce_website",
+      link: "https://e-commerce-website-five-puce.vercel.app",
+      image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop"
     }
   ]
 

@@ -7,14 +7,18 @@ const Skills = () => {
     { name: 'Next.js', icon: 'https://img.icons8.com/nolan/144/nextjs.png' },
     { name: 'JavaScript', icon: 'https://img.icons8.com/color/144/javascript--v1.png' },
     { name: 'TypeScript', icon: 'https://img.icons8.com/color/144/typescript.png' },
+    { name: 'Node.js', icon: 'https://img.icons8.com/color/144/nodejs.png' },
+    { name: 'Docker', icon: 'https://img.icons8.com/color/144/docker.png' },
+    { name: 'n8n', icon: 'https://img.icons8.com/color/144/api-settings.png' },
     { name: 'HTML/CSS', icon: 'https://img.icons8.com/color/144/html-5.png', icon2: 'https://img.icons8.com/color/144/css3.png' },
-    { name: 'Framer Motion', icon: 'https://img.icons8.com/color/144/framer.png' },
     { name: 'Tailwind CSS', icon: 'https://img.icons8.com/color/144/tailwindcss.png' },
-    { name: 'NeonDB', icon: 'https://img.icons8.com/color/144/database.png' },
-    { name: 'AI', icon: 'https://img.icons8.com/color/144/brain.png' },
-    { name: 'AI Agents', icon: 'https://img.icons8.com/fluency/144/robot-2.png' },
+    { name: 'Framer Motion', icon: 'https://img.icons8.com/color/144/framer.png' },
     { name: 'PostgreSQL', icon: 'https://img.icons8.com/color/144/postgreesql.png' },
+    { name: 'NeonDB', icon: 'https://img.icons8.com/color/144/database.png' },
     { name: 'WebRTC', icon: 'https://img.icons8.com/fluency/144/globe-earth.png' },
+    { name: 'Git', icon: 'https://img.icons8.com/color/144/git.png' },
+    { name: 'AI', icon: 'https://img.icons8.com/color/144/brain.png' },
+    { name: 'AI Agents', icon: 'https://img.icons8.com/fluency/144/robot-2.png' }
   ]
 
   const containerVariants = {

@@ -1,8 +1,8 @@
 /* src/components/Projects.css */
-
 .projects-section {
   padding: 128px 0;
-  background-color: #030014; /* Match global bg */
+  background-color: #030014;
+  /* Match global bg */
   color: white;
   min-height: 100vh;
 }
@@ -13,7 +13,6 @@
   padding: 0 24px;
 }
 
-/* Header */
 .projects-header {
   margin-bottom: 64px;
 }
@@ -134,7 +133,6 @@
   transform: scale(1.1);
 }
 
-/* Card Content / Data */
 .project-content {
   padding: 24px;
   display: flex;

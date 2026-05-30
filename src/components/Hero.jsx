@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import { Download, ArrowRight } from 'lucide-react'
 import './Hero.css'
 
 const Hero = () => {
+  const navigate = useNavigate()
   const [text, setText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
   const phrases = [
@@ -79,7 +81,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="btn btn-secondary"
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => navigate('/projects')}
           >
             Explore My Work
             <ArrowRight size={22} />
